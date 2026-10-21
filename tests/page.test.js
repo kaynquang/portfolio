@@ -114,3 +114,27 @@ test('Lab includes the DHH pronunciation-feedback project, as narrative without 
   assert.doesNotMatch(lab, /89\.9/);
   assert.match(lab, /Technical lead/i);
 });
+
+test('indexing block under Publications links SCImago and Scopus as in the CV', () => {
+  const block = html.match(/<div class="indexing"[\s\S]*?<\/div>/)[0];
+  assert.match(block, /Springer LNCS/);
+  assert.match(block, /href="https:\/\/www\.scimagojr\.com\/journalsearch\.php\?q=25674&amp;tip=sid"/);
+  assert.match(block, /SJR 2025/);
+  assert.match(block, /Q2/);
+  assert.match(block, /Springer CCIS/);
+  assert.match(block, /href="https:\/\/www\.scopus\.com\/sourceid\/17700155007"/);
+  assert.match(block, /CiteScore 2025/);
+  assert.match(block, /Q3/);
+  assert.match(block, /Mathematics/);
+  assert.match(block, /MLCI[\s\S]*Scopus-indexed/);
+});
+
+test('press links match the CV, including Tuổi Trẻ, HUFLIT News and Facebook', () => {
+  for (const u of [
+    'https://thanhnien.vn/robot-ban-tim-chup-anh-cho-khach-tren-duong-hoa-nguyen-hue-185250129133644434.htm',
+    'https://tuoitre.vn/dua-robot-hinh-anh-metro-vao-duong-hoa-nguyen-hue-tet-at-ty-2025-20250107221215677.htm',
+    'https://huflit.edu.vn/vi/tin-tuc/ban-linh-sinh-vien-thoi-dai-so-duoc-khang-dinh-o-thang-thanh-nien-huflit-nam-2026/',
+    'https://www.facebook.com/story.php?story_fbid=1243142977998075&amp;id=100069071534709',
+  ]) assert.ok(html.includes(`href="${u}"`), u);
+  assert.ok(!html.includes('185250129015351219'), 'old Thanh Niên link replaced by the CV link');
+});

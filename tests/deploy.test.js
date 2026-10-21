@@ -30,6 +30,6 @@ test('public repo: the published CV is the new one and the old phone number is n
   const same = readFileSync(new URL('CV_Quang_Nguyen.pdf', root));
   assert.ok(cv.equals(same), 'assets/cv should hold CV_Quang_Nguyen.pdf');
   assert.ok(!tracked.includes('CV_Quang_Nguyen.pdf'), 'root CV copy stays untracked');
-  const history = execSync('git rev-list --count HEAD', { cwd: root, encoding: 'utf8' }).trim();
-  assert.equal(history, '1', 'history is a single clean commit (older commits held docs and the old CV)');
+  const everAdded = execSync('git log HEAD --name-only --format=', { cwd: root, encoding: 'utf8' }).split('\n').filter(Boolean);
+  assert.deepEqual(everAdded.filter((f) => f.startsWith('docs/') || f === 'CV_Nguyen_Minh_Quang.pdf' || f === 'CV_Quang_Nguyen.pdf'), [], 'no commit in history touched docs/ or a root CV');
 });

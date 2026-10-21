@@ -104,3 +104,9 @@
 .lab-logo--dark { background: var(--navy); padding: 0 0.9rem; border-radius: 3px; height: 44px; }
 .lab-logo--dark img { height: 26px; }
 @media (max-width: 899px) { .chapter-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* Indexing note under the publication cards */
+.indexing { margin-top: 1.75rem; padding: 1rem 1.25rem; border-left: 4px solid var(--sage); background: rgba(255, 253, 249, 0.6); max-width: 60ch; }
+.indexing h4 { margin: 0 0 0.5rem; }
+.indexing ul { margin: 0; padding-left: 1.1rem; }
+.indexing li { margin: 0.25rem 0; }
