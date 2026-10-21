@@ -1,0 +1,7 @@
+exclude:
+  - docs
+  - tests
+  - package.json
+  - README.md
+  - CV_Nguyen_Minh_Quang.pdf
+  - SOP_VinUni.pdf

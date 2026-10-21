@@ -1,0 +1,10 @@
+# Nguyen Minh Quang
+
+> Edge-AI researcher making machine learning run, and keep learning, on low-cost devices. Based in Ho Chi Minh City, Vietnam; research intern at National Formosa University (Taiwan).
+
+## Pages
+- [Portfolio](https://minhquang.dev/): robots in public (Street), edge-AI research and publications (Lab), and a short future direction (Future).
+- [CV (PDF)](https://minhquang.dev/assets/cv/CV_Nguyen_Minh_Quang.pdf): full list of publications, awards and experience.
+
+## Contact
+- nmq.brian@gmail.com

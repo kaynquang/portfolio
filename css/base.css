@@ -1,0 +1,74 @@
+:root {
+  --paper: #f4efe6;
+  --paper-deep: #e9e2d3;
+  --ink: #2b2b2b;
+  --ink-soft: #6b6457;
+  --terracotta: #d9825b;
+  --sage: #7da08a;
+  --terracotta-deep: #a8502c;
+  --focus: #3f5f4a;
+  --white: #fffdf9;
+  --navy: #1d3557;
+  --font-body: Inter, system-ui, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-decoration-color: var(--terracotta); text-underline-offset: 0.2em; }
+a:hover { color: var(--terracotta); }
+a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin: 0 0 0.5em; }
+h1 { font-size: clamp(2.2rem, 6vw, 4rem); max-width: 18ch; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.75rem); }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.15rem; }
+
+nav { display: flex; gap: 1.5rem; padding: 1.25rem 0; font-size: 0.95rem; }
+nav a { text-decoration: none; }
+
+.eyebrow, .chapter-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.lede { max-width: 52ch; color: var(--ink-soft); }
+.note { color: var(--ink-soft); font-size: 0.9em; }
+
+#hero, .chapter {
+  width: min(1080px, 100% - 32px);
+  margin-inline: auto;
+}
+.chapter { padding: 4.5rem 0; }
+.chapter--short { padding: 3rem 0 4rem; max-width: 720px; }
+
+.stat-line { font-family: var(--font-display); font-size: 1.9rem; margin: 0 0 1rem; }
+.stat-line .note { font-family: var(--font-body); }
+
+.figures { padding-left: 1.2rem; }
+.figures li { margin-bottom: 0.5rem; }
+
+.more-street, .pub-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.pub-heading { margin-top: 3rem; }
