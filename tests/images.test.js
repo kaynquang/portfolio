@@ -122,3 +122,7 @@ test('GUTS figure shows only the leak state', () => {
   assert.doesNotMatch(tag, /alt="[^"]*normal/i);
   assert.doesNotMatch(card, /normal/i);
 });
+
+test('profile icons exist locally', () => {
+  for (const n of ['github', 'linkedin', 'orcid']) assert.ok(existsSync(new URL(`assets/logos/${n}.svg`, root)), n);
+});

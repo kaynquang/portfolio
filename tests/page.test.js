@@ -139,3 +139,22 @@ test('press links match the CV, including Tuổi Trẻ, HUFLIT News and Facebook
   ]) assert.ok(html.includes(`href="${u}"`), u);
   assert.ok(!html.includes('185250129015351219'), 'old Thanh Niên link replaced by the CV link');
 });
+
+const PROFILES = {
+  github: 'https://github.com/kaynquang',
+  linkedin: 'https://www.linkedin.com/in/quang-nguyen-a3284036a/',
+  orcid: 'https://orcid.org/0009-0001-9469-8360',
+};
+
+test('contact shows GitHub, LinkedIn and ORCID, each with a local icon and a link', () => {
+  const contact = html.match(/id="contact"[\s\S]*?<\/footer>/)[0];
+  for (const [name, url] of Object.entries(PROFILES)) {
+    assert.match(contact, new RegExp(`<a class="profile-link"[^>]*href="${url.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}"[^>]*>[\\s\\S]*?assets/logos/${name}\\.svg[\\s\\S]*?</a>`), name);
+  }
+  assert.doesNotMatch(contact, /my-orcid/, 'use the public ORCID URL, not the login redirect');
+});
+
+test('JSON-LD sameAs lists all three profiles', () => {
+  const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+  for (const url of Object.values(PROFILES)) assert.ok(data.sameAs.includes(url), url);
+});
