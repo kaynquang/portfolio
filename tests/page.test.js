@@ -104,3 +104,13 @@ test('Lab lists both labs with university logos; only CCIS has a link', () => {
   assert.match(tinhvi, /assets\/logos\/huflit\.png/);
   assert.doesNotMatch(tinhvi, /<a /, 'no public TINH VI page yet');
 });
+
+test('Lab includes the DHH pronunciation-feedback project, as narrative without accuracy figures', () => {
+  const lab = html.match(/id="lab"[\s\S]*?<\/section>/)[0];
+  assert.match(lab, /deaf and hard-of-hearing/i);
+  assert.match(lab, /pronunciation/i);
+  assert.match(lab, /Hui-Kai Su/);
+  assert.match(lab, /phonetician/i);
+  assert.doesNotMatch(lab, /89\.9/);
+  assert.match(lab, /Technical lead/i);
+});
