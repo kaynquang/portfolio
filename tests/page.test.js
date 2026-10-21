@@ -125,7 +125,8 @@ test('indexing block under Publications links SCImago and Scopus as in the CV', 
   assert.match(block, /href="https:\/\/www\.scopus\.com\/sourceid\/17700155007"/);
   assert.match(block, /CiteScore 2025/);
   assert.match(block, /Q3/);
-  assert.match(block, /Mathematics/);
+  assert.match(block, /Q3<\/a> \(Mathematics\)/, 'Q3 carries the Mathematics category');
+  assert.doesNotMatch(block, /Q2<\/a> \(Mathematics\)/, 'Q2 has no category note');
   assert.match(block, /MLCI[\s\S]*Scopus-indexed/);
 });
 
