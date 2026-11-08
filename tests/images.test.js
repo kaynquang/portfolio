@@ -97,7 +97,7 @@ test('cards use the supplied photos: HIRO team, GUTS thermal figure, IT Got Tale
 });
 
 test('portrait: avatar in the hero and a credited portrait figure in contact', () => {
-  assert.match(html, /<img class="avatar" src="assets\/img\/quang\.jpg"[^>]*alt="Nguyen Minh Quang/);
+  assert.match(html, /<img class="avatar" src="assets\/img\/quang\.jpg"[^>]*alt="Nguyễn Minh Quang/);
   assert.match(html, /<figure class="photo portrait"[\s\S]*?Photo: Nguyen Minh Quang[\s\S]*?<\/figure>/);
 });
 

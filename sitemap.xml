@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://minhquang.dev/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://minhquang.dev/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minhquang.dev/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://minhquang.dev/vi/"/>
+  </url>
+  <url>
+    <loc>https://minhquang.dev/vi/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://minhquang.dev/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://minhquang.dev/vi/"/>
+  </url>
 </urlset>
