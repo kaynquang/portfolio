@@ -17,12 +17,13 @@ export function renderPublication(p) {
   const doi = p.doi
     ? `<a class="pub-doi" href="https://doi.org/${esc(p.doi)}" rel="noopener">DOI ${esc(p.doi)}</a>`
     : '';
+  const isbn = p.isbn ? `<span class="pub-isbn">ISBN ${esc(p.isbn)}</span>` : '';
   const logos = (p.logos ?? []).length ? `<div class="pub-logos">${p.logos.map(renderLogo).join('')}</div>` : '';
   return `<article class="pub paper-card" data-reveal>
   ${logos}
   <h4 class="pub-title">${esc(p.title)}</h4>
   <p class="pub-meta">${esc(p.venue)} · ${esc(ROLE_LABEL[p.role] ?? p.role)} · ${esc(p.status)}</p>
-  ${badge}${doi}
+  ${badge}${doi}${isbn}
 </article>`;
 }
 

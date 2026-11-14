@@ -14,7 +14,7 @@ All local URLs are document-relative, so opening `index.html` straight from disk
 
 ## Add a publication
 
-Append an object to `publications` in `js/data.js` (fields: `id`, `title`, `venue`, `role`, `status`, `year`, optional `doi`, `award`, `logos`). The card and the paper count update on their own.
+Append an object to `publications` in `js/data.js` (fields: `id`, `title`, `venue`, `role`, `status`, `year`, optional `doi`, `isbn`, `award`, `logos`). The card and the paper count update on their own.
 
 ## Add or replace a photo
 

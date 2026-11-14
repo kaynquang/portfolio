@@ -15,6 +15,11 @@ test('renders the title and links the DOI only when one exists', () => {
   assert.doesNotMatch(renderPublication(base), /doi\.org/);
 });
 
+test('shows the ISBN as plain text only when one exists', () => {
+  assert.match(renderPublication({ ...base, isbn: '978-604-45-4157-0' }), /<span class="pub-isbn">ISBN 978-604-45-4157-0<\/span>/);
+  assert.doesNotMatch(renderPublication(base), /ISBN/);
+});
+
 test('shows the Best Paper badge for the award entry', () => {
   const awarded = publications.find((p) => p.award);
   assert.match(renderPublication(awarded), /Best Paper/);

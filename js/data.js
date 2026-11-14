@@ -42,7 +42,7 @@ export const publications = [
     id: 'legal-edge-retrieval',
     title: 'Sustainable legal information access through edge AI: a hybrid vector-hypergraph retrieval system for Vietnamese traffic law consultation',
     venue: 'ICBS 2026, UEH',
-    role: 'co-author', status: 'accepted', year: 2026, logos: ['ueh'],
+    role: 'co-author', status: 'accepted', year: 2026, isbn: '978-604-45-4157-0', logos: ['ueh'],
   },
   {
     id: 'hydrogen-thermal',

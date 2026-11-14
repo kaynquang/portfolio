@@ -102,3 +102,9 @@ test('HUFLIT student ID is shown on both pages and in the JSON-LD', () => {
   const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
   assert.ok(data.identifier.some((i) => i.value === '23DH114792'));
 });
+
+test('Vietnamese page shows every ISBN from data.js', async () => {
+  const vi = read('vi/index.html');
+  const { publications } = await import(new URL('js/data.js', root));
+  for (const p of publications.filter((x) => x.isbn)) assert.ok(vi.includes(`ISBN ${p.isbn}`), p.isbn);
+});

@@ -33,7 +33,7 @@
 .pub-meta { margin: 0 0 0.6rem; font-size: 0.9rem; color: var(--ink-soft); }
 .pub-logos { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.6rem; }
 .pub-logo { height: 22px; width: auto; }
-.pub-doi { font-size: 0.85rem; display: inline-block; margin-left: 0.5rem; }
+.pub-doi, .pub-isbn { font-size: 0.85rem; display: inline-block; margin-left: 0.5rem; }
 .badge--award { display: inline-block; padding: 0.15rem 0.6rem; font-size: 0.8rem; background: var(--terracotta-deep); color: var(--white); border-radius: 2px; }
 
 /* Scroll reveal: content is only hidden once JS has started (.js-reveal). */

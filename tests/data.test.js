@@ -24,6 +24,7 @@ test('one first-author and one corresponding-author paper', () => {
 
 test('the two ACM MLCI papers carry their DOIs', () => {
   const dois = publications.filter((p) => p.doi).map((p) => p.doi).sort();
+  assert.equal(publications.find((p) => p.id === 'legal-edge-retrieval').isbn, '978-604-45-4157-0');
   assert.deepEqual(dois, ['10.1007/978-981-92-7408-6_23', '10.1007/978-981-92-7411-6_16', '10.1145/3815970.3815972', '10.1145/3815970.3815978']);
 });
 
