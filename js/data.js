@@ -18,7 +18,7 @@ export const publications = [
     id: 'ic-peak-shifts',
     title: 'Discharge incremental-capacity peak shifts as non-invasive proxies for effective resistance heterogeneity and imbalance diagnostics in parallel lithium-ion modules',
     venue: 'ISDS 2026, Springer CCIS',
-    role: 'first', status: 'accepted', year: 2026, logos: ['springer', 'ctu', 'yzu'],
+    role: 'first', status: 'published', year: 2026, doi: '10.1007/978-981-92-7408-6_23', logos: ['springer', 'ctu', 'yzu'],
   },
   {
     id: 'onnx-backdoor',
@@ -36,7 +36,7 @@ export const publications = [
     id: 'vital',
     title: 'VITAL: Vietnamese Text-Image Alignment Learning for Weakly Grounded Multimodal Clickbait Detection',
     venue: 'ISDS 2026, Springer CCIS',
-    role: 'co-author', status: 'accepted', year: 2026, logos: ['springer', 'ctu', 'yzu'],
+    role: 'co-author', status: 'published', year: 2026, doi: '10.1007/978-981-92-7411-6_16', logos: ['springer', 'ctu', 'yzu'],
   },
   {
     id: 'legal-edge-retrieval',
