@@ -30,7 +30,7 @@ export const publications = [
     id: 'traffic-sign-nms-free',
     title: 'Real-Time Traffic Sign Detection for Edge Devices: A Mixed-Precision NMS-Free Approach',
     venue: 'ATAC 2026',
-    role: 'co-author', status: 'accepted', year: 2026, award: 'Best Paper Award', logos: ['eiu'],
+    role: 'co-author', status: 'published', year: 2026, isbn: '978-632-637-066-9', award: 'Best Paper Award', logos: ['eiu'],
   },
   {
     id: 'vital',
